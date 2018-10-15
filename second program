@@ -1,0 +1,35 @@
+//решение на 100 баллов
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] arguments) {
+		Scanner sc = new Scanner(System.in);
+		int x1 = sc.nextInt(); /* вводим данные
+		int y1 = sc.nextInt();
+		int x2 = sc.nextInt();
+		int y2 = sc.nextInt();
+		int x = sc.nextInt();
+		int y = sc.nextInt(); */
+		int x3 = x1; /* для удобства выделяем еще еще по 2 координаты
+		int y3 = y2;
+		int x4 = x2;
+		int y4 = y1; */
+		if (x > x3 && x < x2 && y > y3) //случай если пловец сверху плота
+			System.out.println("N");
+		else if (x < x3 && y > y3) //случай если пловец с севера-запада
+			System.out.println("NW");
+		else if (x < x3 && y < y3 && y > y1) //случай если пловец слева
+			System.out.println("W");
+		else if (x < x1 && y < y1) //случай если пловец с юго-запада
+			System.out.println("SW");
+		else if (x > x1 && x < x4 && y < y1) //случай если пловец снизу
+			System.out.println("S");
+		else if (x > x4 && y < y4) //случай если пловец с юго-востока
+			System.out.println("SE");
+		else if (x > x4 && y > y4 && y < y2) //случай если пловец справа
+			System.out.println("E");
+		else if (x > x2 && y > y2) //случай если пловец с севера-востока
+			System.out.println("NE");
+	}
+
+}
