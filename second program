@@ -4,16 +4,19 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] arguments) {
 		Scanner sc = new Scanner(System.in);
-		int x1 = sc.nextInt(); /* вводим данные
+		
+		int x1 = sc.nextInt(); //вводим данные
 		int y1 = sc.nextInt();
 		int x2 = sc.nextInt();
 		int y2 = sc.nextInt();
 		int x = sc.nextInt();
-		int y = sc.nextInt(); */
-		int x3 = x1; /* для удобства выделяем еще еще по 2 координаты
+		int y = sc.nextInt(); 
+		
+		int x3 = x1; // для удобства выделяем еще еще по 2 координаты
 		int y3 = y2;
 		int x4 = x2;
-		int y4 = y1; */
+		int y4 = y1; 
+		
 		if (x > x3 && x < x2 && y > y3) //случай если пловец сверху плота
 			System.out.println("N");
 		else if (x < x3 && y > y3) //случай если пловец с севера-запада
