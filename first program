@@ -1,0 +1,16 @@
+//задача решена на 70 баллов из 100
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] arguments) {
+		Scanner sc = new Scanner(System.in); 
+		double k = sc.nextInt(); /*
+		double p = sc.nextInt(); * вводим числа
+		double s = sc.nextInt(); */
+    int newPrice = k + k * p / 100; //новая цена (старая цена + старая цена * процент поднятия цены) 
+    int result = (int) Math.floor(s / newPrice); //получаем количество возможных ручек, округляем в меньшую сторону и приводим к целому числу
+		System.out.println(result); //вывод количества ручек
+
+	}
+
+}
