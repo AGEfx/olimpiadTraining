@@ -4,10 +4,13 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] arguments) {
 		Scanner sc = new Scanner(System.in);
+		
 		int s = sc.nextInt();// максимальный вес
 		int n = sc.nextInt();// количество вещей
+		
 		int wR = 0; // вес рюкзака
 		int wC = 0;// вес чемодана
+		
 		for (int i = 0; i < n; i++) { //создаем цикл с количеством итераций равным количеству вещей
 			int cW = sc.nextInt(); //вводим вес вещи 
 			if (wR + cW <= s) // если текущий вес рюкзака + вес вещи меньше или равен максимального веса  
@@ -15,6 +18,7 @@ public class Main {
 			else if (wR + cW > s) //если вес рюкзака + вес вещи больше максимального веса рюкзака
 				wC += cW; //тогда прибавляем вес вещи к весу чемодана (кладем вещь в чемодан)
 		}
+		
 		System.out.println(wR + "\n" + wC); // после окончания цикла выводи вес рюкзака и вес чемодана на новых строках
 	}
 
